@@ -1,0 +1,7 @@
+Flask==2.0.1
+Jinja2==3.0.1
+pdfkit==1.0.0
+Werkzeug==2.0.1
+Flask-Login
+gunicorn >= 20.1.0
+requests

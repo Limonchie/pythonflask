@@ -1,0 +1,23 @@
+{
+    "id": 1,
+    "last_name": "Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "birth_date": "1111-11-11",
+    "address": "Ек",
+    "gender": "male",
+    "snils": "",
+    "id_type": "passport",
+    "id_serial": "1234",
+    "id_number": "123456",
+    "id_issued_by": "МВД",
+    "id_issued_date": "1111-11-11",
+    "bank_details": "",
+    "phone": "+79999999999",
+    "email": "123@123",
+    "study_plan": "Практический курс китайского языка для взрослых",
+    "exam_selection": null,
+    "exam_date": null,
+    "status": "проверено",
+    "submission_date": "2024-10-24 02:50:03"
+}

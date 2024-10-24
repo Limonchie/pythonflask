@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ formtitle }}</h1>
+
+<p class="lead">
+    Для составления договора заполните анкету. Поля помеченные <b style="color: red;">*</b> обязательны к заполнению.
+</p>
+
+<form action="" method="post">
+    <h3>Заполните информацию об обучающемся/экзаменуемом.</h3>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="studentname-lastname">Фамилия (<b style="color: red;">*</b>) </label>
+            <input type="text" class="form-control" id="studentname-lastname" name="studentname-lastname" placeholder="Иванов" required pattern="^[А-Яа-яЁё]+$">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="studentname-name">Имя (<b style="color: red;">*</b>) </label>
+            <input type="text" class="form-control" id="studentname-name" name="studentname-name" placeholder="Иван" required pattern="^[А-Яа-яЁё]+$">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="studentname-surname">Отчество</label>
+            <input type="text" class="form-control" id="studentname-surname" name="studentname-surname" placeholder="Иванович" pattern="^[А-Яа-яЁё]+$">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="studentbirth">Дата рождения (<b style="color: red;">*</b>) </label>
+        <input type="date" class="form-control" id="studentbirth" name="studentbirth" placeholder="01.01.1970" required>
+    </div>
+    <div class="form-group">
+        <label for="studentaddress">Местонахождение/адрес места жительства (<b style="color: red;">*</b>) </label>
+        <input type="text" class="form-control" id="studentaddress" name="studentaddress" placeholder="г. Екатеринбург, ул. Строителей, д. 1" required>
+    </div>
+    <div class="form-group">
+        <label for="studentid">Номер свидетельства о рождении (<b style="color: red;">*</b>) </label>
+        <input type="text" class="form-control" id="studentid" name="studentid" placeholder="" required>
+    </div>
+    <div class="form-group">
+        <label for="studentbank">Банковские реквизиты (при наличии) </label>
+        <input type="text" class="form-control" id="studentbank" name="studentbank" placeholder="">
+    </div>
+    <div class="form-group">
+        <label for="studentphone">Номер телефона (<b style="color: red;">*</b>) </label>
+        <input type="tel" class="form-control" id="studentphone" name="studentphone" placeholder="+79998887766" required pattern="+7[0-9]{11}">
+    </div>
+    <div class="form-group">
+        <label for="studentemail">Адрес электронной почты (<b style="color: red;">*</b>) </label>
+        <input type="email" class="form-control" id="studentemail" name="studentemail" placeholder="iivanov@example.com" required>
+    </div>
+
+    {% block extrafields %}{% endblock %}
+
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="agreement" name="agreement" required>
+        <label class="form-check-label" for="agreement">Я согласен на передачу и обработку моих персональных данных (<b style="color: red;">*</b>) </label>        
+    </div>
+
+    <br>
+    <button type="submit" class="btn btn-info">Далее</button>
+</form>
+
+{% endblock %}

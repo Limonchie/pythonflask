@@ -1,0 +1,23 @@
+{
+    "id": 6,
+    "last_name": "Иванов",
+    "first_name": "Тест",
+    "middle_name": "Тест",
+    "birth_date": "1311-03-12",
+    "address": "dwqsd",
+    "gender": "female",
+    "snils": "",
+    "id_type": "passport",
+    "id_serial": "1234",
+    "id_number": "123456",
+    "id_issued_by": "Тест",
+    "id_issued_date": "3121-12-23",
+    "bank_details": "",
+    "phone": "+79999999999",
+    "email": "123@123",
+    "study_plan": "Практический курс китайского языка для взрослых",
+    "exam_selection": null,
+    "exam_date": null,
+    "status": "проверено",
+    "submission_date": "2024-10-24 19:55:21"
+}

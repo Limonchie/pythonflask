@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Оформление договоров</h1>
+
+<p class="lead">
+    Для оформления договора на оказание образовательных услуг выберите тип договора из предложенных ниже.
+</p>
+
+<div class="list-group">
+    <a href="{{base_url}}/education_adult" class="list-group-item list-group-item-action">Практический курс китайского языка для взрослых</a>
+    <a href="{{base_url}}/education_children_under14" class="list-group-item list-group-item-action">Практический курс китайского языка для несовершеннолетних(до 14 лет)</a>
+    <a href="{{base_url}}/education_children_over14" class="list-group-item list-group-item-action">Практический курс китайского языка для несовершеннолетних(от 14 до 18 лет)</a>
+    <a href="{{base_url}}/exam_adult" class="list-group-item list-group-item-action">Экзамен (взрослые)</a>
+    <a href="{{base_url}}/exam_children_under14" class="list-group-item list-group-item-action">Экзамен(дети до 14 лет)</a>
+    <a href="{{base_url}}/exam_children_over14" class="list-group-item list-group-item-action">Экзамен(дети от 14 до 18 лет)</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,303 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Полная информация о студенте</h1>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <td>{{ student[0] }}</td>
+    </tr>
+    <tr>
+        <th>Фамилия</th>
+        <td>{{ student[1] }}</td>
+    </tr>
+    <tr>
+        <th>Имя</th>
+        <td>{{ student[2] }}</td>
+    </tr>
+    <tr>
+        <th>Отчество</th>
+        <td>{{ student[3] }}</td>
+    </tr>
+    <tr>
+        <th>Дата рождения</th>
+        <td>{{ student[4] }}</td>
+    </tr>
+    <tr>
+        <th>Адрес</th>
+        <td>{{ student[5] }}</td>
+    </tr>
+    <tr>
+        <th>Пол</th>
+        <td>
+            {% if student[6] == 'male' %}
+                {{ 'Мужчина' }}
+            {% endif %}
+            {% if student[6] == 'female' %}
+                {{ 'Женщина' }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <th>СНИЛС</th>
+        <td>{{ student[7] }}</td>
+    </tr>
+    <tr>
+        <th>Тип документа</th>
+        <td>
+            {% if student[8] == 'passport' %}
+                {{ 'Паспорт' }}
+            {% endif %}
+            {% if student[9] == 'birth certificate' %}
+                {{ 'Свидетельство о рождении' }}
+            {% endif %}
+            {% if student[9] == 'passport' %}
+                {{ 'Паспорт' }}
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <th>Серия документа</th>
+        <td>{{ student[9] }}</td>
+    </tr>
+    <tr>
+        <th>Номер документа</th>
+        <td>{{ student[10] }}</td>
+    </tr>
+    <tr>
+        <th>Выдан</th>
+        <td>{{ student[11] }}</td>
+    </tr>
+    <tr>
+        <th>Дата выдачи</th>
+        <td>{{ student[12] }}</td>
+    </tr>
+    <tr>
+        <th>Банковские реквизиты</th>
+        <td>{{ student[13] }}</td>
+    </tr>
+    <tr>
+        <th>Телефон</th>
+        <td>{{ student[14] }}</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>{{ student[15] }}</td>
+    </tr>
+    <tr>
+        <th>Учебный план</th>
+        <td>{{ student[16] }}</td>
+    </tr>
+    <tr>
+        <th>Выбор экзамена</th>
+        <td>{{ student[17] }}</td>
+    </tr>
+    <tr>
+        <th>Дата экзамена</th>
+        <td>{{ student[18] }}</td>
+    </tr>
+    <tr>
+        <th>Статус</th>
+        <td>{{ student[19] }}</td>
+    </tr>
+    <tr>
+        <th>Дата подачи заявки</th>
+        <td>{{ student[20] }}</td>
+    </tr>
+    {% if student[8] == 'under14' %}
+    <tr>
+        <th>Возрастная группа</th>
+        <td>{{ student[8] }}</td>
+    </tr>
+    <tr>
+        <th>Ответственное лицо</th>
+        <td>
+            <table class="table">
+                <tr>
+                    <th>Фамилия</th>
+                    <td>{{ representative[2] }}</td>
+                </tr>
+                <tr>
+                    <th>Имя</th>
+                    <td>{{ representative[3] }}</td>
+                </tr>
+                <tr>
+                    <th>Отчество</th>
+                    <td>{{ representative[4] }}</td>
+                </tr>
+                <tr>
+                    <th>Дата рождения</th>
+                    <td>{{ representative[5] }}</td>
+                </tr>
+                <tr>
+                    <th>Адрес</th>
+                    <td>{{ representative[6] }}</td>
+                </tr>
+                <tr>
+                    <th>Пол</th>
+                    <td>
+                        {% if representative[7] == 'male' %}
+                            {{ 'Мужчина' }}
+                        {% endif %}
+                        {% if representative[7] == 'female' %}
+                            {{ 'Женщина' }}
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th>СНИЛС</th>
+                    <td>{{ representative[8] }}</td>
+                </tr>
+                <tr>
+                    <th>Серия паспорта</th>
+                    <td>{{ representative[9] }}</td>
+                </tr>
+                <tr>
+                    <th>Номер паспорта</th>
+                    <td>{{ representative[10] }}</td>
+                </tr>
+                <tr>
+                    <th>Выдан</th>
+                    <td>{{ representative[11] }}</td>
+                </tr>
+                <tr>
+                    <th>Дата выдачи</th>
+                    <td>{{ representative[12] }}</td>
+                </tr>
+                <tr>
+                    <th>Банковские реквизиты</th>
+                    <td>{{ representative[13] }}</td>
+                </tr>
+                <tr>
+                    <th>Телефон</th>
+                    <td>{{ representative[14] }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{ representative[15] }}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    {% endif %}
+    {% if student[8] == 'over14' %}
+    <tr>
+        <th>Возрастная группа</th>
+        <td>{{ student[8] }}</td>
+    </tr>
+    <tr>
+        <th>Ответственное лицо</th>
+        <td>
+            <table class="table">
+                <tr>
+                    <th>Фамилия</th>
+                    <td>{{ representative[2] }}</td>
+                </tr>
+                <tr>
+                    <th>Имя</th>
+                    <td>{{ representative[3] }}</td>
+                </tr>
+                <tr>
+                    <th>Отчество</th>
+                    <td>{{ representative[4] }}</td>
+                </tr>
+                <tr>
+                    <th>Дата рождения</th>
+                    <td>{{ representative[5] }}</td>
+                </tr>
+                <tr>
+                    <th>Адрес</th>
+                    <td>{{ representative[6] }}</td>
+                </tr>
+                <tr>
+                    <th>Пол</th>
+                    <td>
+                        {% if representative[7] == 'male' %}
+                        {{ 'Мужчина' }}
+                        {% endif %}
+                        {% if representative[7] == 'female' %}
+                        {{ 'Женщина' }}
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th>СНИЛС</th>
+                    <td>{{ representative[8] }}</td>
+                </tr>
+                <tr>
+                    <th>Серия паспорта</th>
+                    <td>{{ representative[9] }}</td>
+                </tr>
+                <tr>
+                    <th>Номер паспорта</th>
+                    <td>{{ representative[10] }}</td>
+                </tr>
+                <tr>
+                    <th>Выдан</th>
+                    <td>{{ representative[11] }}</td>
+                </tr>
+                <tr>
+                    <th>Дата выдачи</th>
+                    <td>{{ representative[12] }}</td>
+                </tr>
+                <tr>
+                    <th>Банковские реквизиты</th>
+                    <td>{{ representative[13] }}</td>
+                </tr>
+                <tr>
+                    <th>Телефон</th>
+                    <td>{{ representative[14] }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{ representative[15] }}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    {% endif %}
+    {% if student[21] != null %}
+    <div class="form-group">
+        <label>Загруженные файлы:</label>
+        <ul>
+            {% if student[21] %}
+                {% for file_path in student[21].split(',') %}
+                    <li><a href="{{ url_for('get_file', file_path=file_path) }}" target="_blank">{{ file_path }}</a></li>
+                {% endfor %}
+            {% else %}
+                <li>Файлы не загружены</li>
+            {% endif %}
+        </ul>
+    </div>
+    {% endif %}
+</table>
+
+{% if student[20] == 'на проверке' %}
+<div class="button-container">
+    <form method="POST" action="{{ base_url }}/moderation/{{ table_name }}/student/{{ student[0] }}">
+        <input type="hidden" name="table_name" value="{{ table_name }}">
+        <button type="submit" name="action" value="approve" class="btn btn-success">Подтвердить</button>
+        <button type="submit" name="action" value="reject" class="btn btn-danger">Отклонить</button>
+    </form>
+</div>
+{% endif %}
+{% if student[19] == 'на проверке' %}
+<div class="button-container">
+    <form method="POST" action="{{ base_url }}/moderation/{{ table_name }}/student/{{ student[0] }}">
+        <input type="hidden" name="table_name" value="{{ table_name }}">
+        <button type="submit" name="action" value="approve" class="btn btn-success">Подтвердить</button>
+        <button type="submit" name="action" value="reject" class="btn btn-danger">Отклонить</button>
+    </form>
+</div>
+{% endif %}
+
+<style>
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+</style>
+
+{% endblock %}

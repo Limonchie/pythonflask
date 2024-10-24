@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Экзамен для взрослых</h1>
+
+<p class="lead">
+    Для составления договора заполните анкету. Поля помеченные <b style="color: red;">*</b> обязательны к заполнению.
+</p>
+
+<form action="" method="post">
+    <h3>Заполните информацию об обучающемся/экзаменуемом.</h3>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="studentname-lastname">Фамилия (<b style="color: red;">*</b>) </label>
+            <input type="text" class="form-control" id="studentname-lastname" name="studentname-lastname" placeholder="Иванов" required pattern="^[А-Яа-яЁё]+$">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="studentname-name">Имя (<b style="color: red;">*</b>) </label>
+            <input type="text" class="form-control" id="studentname-name" name="studentname-name" placeholder="Иван" required pattern="^[А-Яа-яЁё]+$">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="studentname-surname">Отчество</label>
+            <input type="text" class="form-control" id="studentname-surname" name="studentname-surname" placeholder="Иванович" pattern="^[А-Яа-яЁё]+$">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="studentbirth">Дата рождения (<b style="color: red;">*</b>) </label>
+        <input type="date" class="form-control" id="studentbirth" name="studentbirth" placeholder="01.01.1970" required>
+    </div>
+    <div class="form-group">
+        <label for="studentaddress">Местонахождение/адрес места жительства (<b style="color: red;">*</b>) </label>
+        <input type="text" class="form-control" id="studentaddress" name="studentaddress" placeholder="г. Екатеринбург, ул. Строителей, д. 1" required>
+    </div>
+    <div class="form-group">
+        <label for="studentgender">Пол (<b style="color: red;">*</b>) </label>
+        <select class="form-control" id="studentgender" name="studentgender" required>
+            <option value="male">Мужской</option>
+            <option value="female">Женский</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="studentsnils">СНИЛС</label>
+        <input type="text" class="form-control" id="studentsnils" name="studentsnils" placeholder="123-456-789 00" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3} [0-9]{2}">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="studentid-serial">Серия паспорта (<b style="color: red;">*</b>) </label>
+            <input type="text" class="form-control" id="studentid-serial" name="studentid-serial" placeholder="1234" required pattern="[0-9]{4}">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="studentid-number">Номер паспорта (<b style="color: red;">*</b>) </label>
+            <input type="text" class="form-control" id="studentid-number" name="studentid-number" placeholder="123456" required pattern="[0-9]{6}">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="studentid-by">Выдан (<b style="color: red;">*</b>) </label>
+            <input type="text" class="form-control" id="studentid-by" name="studentid-by" placeholder="МВД России по Пермской обл." required>
+        </div>
+        <div class="form-group">
+            <label for="studentid-issued">Дата выдачи (<b style="color: red;">*</b>) </label>
+            <input type="date" class="form-control" id="studentid-issued" name="studentid-issued" placeholder="01.01.1970" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="studentbank">Банковские реквизиты (при наличии) </label>
+        <input type="text" class="form-control" id="studentbank" name="studentbank" placeholder="">
+    </div>
+    <div class="form-group">
+        <label for="studentphone">Номер телефона (<b style="color: red;">*</b>) </label>
+        <input type="tel" class="form-control" id="studentphone" name="studentphone" placeholder="+79998887766" required pattern="+7[0-9]{11}">
+    </div>
+    <div class="form-group">
+        <label for="studentemail">Адрес электронной почты (<b style="color: red;">*</b>) </label>
+        <input type="email" class="form-control" id="studentemail" name="studentemail" placeholder="iivanov@example.com" required>
+    </div>
+
+    <h3>Выберите уровень и тип сдаваемого экзамена.</h3>
+    <div class="form-group">
+        <label for="examselection">Уровень тип и уровень сдаваемого экзамена</label>
+        <select class="custom-select my-1 mr-sm-2" id="examselection" name="examselection">
+            <option selected value="">Не выбрано</option>
+            <option value="1">HSK (Уровень 1)</option>
+            <option value="2">HSK (Уровень 2)</option>
+            <option value="3">HSK (Уровень 3)</option>
+            <option value="4">HSK (Уровень 4)</option>
+            <option value="5">HSK (Уровень 5)</option>
+            <option value="6">HSK (Уровень 6)</option>
+            <option value="7">HSKK (Базовый уровень)</option>
+            <option value="8">HSKK (Средний уровень)</option>
+            <option value="9">HSKK (Высокий уровень)</option>
+            <option value="10">BCT (A)</option>
+            <option value="11">BCT (B)</option>
+            <option value="12">YCT (Уровень 1)</option>
+            <option value="13">YCT (Уровень 2)</option>
+            <option value="14">YCT (Уровень 3)</option>
+            <option value="15">YCT (Уровень 4)</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="examdate">Дата экзамена</label>
+        <input type="date" class="form-control" id="examdate" name="examdate" placeholder="01.01.1970">
+    </div>
+
+    <div class="form-group">
+        <label for="studentfiles">Загрузите файлы скан-копий документов (обязательно)</label>
+        <input type="file" class="form-control-file" id="studentfiles" name="studentfiles" multiple required>
+    </div>
+
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="agreement" name="agreement" required>
+        <label class="form-check-label" for="agreement">Я согласен на передачу и обработку моих персональных данных (<b style="color: red;">*</b>) </label>
+    </div>
+
+    <br>
+    <button type="submit" class="btn btn-info">Далее</button>
+</form>
+
+{% endblock %}

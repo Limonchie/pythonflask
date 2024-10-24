@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  chinaekb-forms:
+    build: .
+    container_name: chinaekb-forms
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:80/status"]
+      timeout: 10s
+      interval: 1m
+      retries: 3
+    restart: always
+    ports:
+      - 80:80
+    environment:
+      - TZ=Asia/Yekaterinburg
+      - DOCS_TTL=3600
+    volumes:
+      - /path/to/docs:/docs
+      - /path/to/contracts:/contracts

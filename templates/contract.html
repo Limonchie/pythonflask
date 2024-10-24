@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Поздравляем</h1>
+
+<p class="lead">
+    Договор на оказание образовательных услуг сформирован. Осталось его скачать, распечатать и подписать.
+</p>
+
+<div class="list-group">
+    <a href="{{ base_url }}/docs/{{ docid }}.pdf" class="list-group-item list-group-item-action" target="_blank">Скачать PDF</a>
+    <a href="{{ base_url }}/docs/{{ docid }}.html" class="list-group-item list-group-item-action" target="_blank">Скачать HTML</a>
+</div>
+
+{% endblock %}

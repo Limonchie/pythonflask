@@ -1,0 +1,23 @@
+{
+    "id": 2,
+    "last_name": "Иванов",
+    "first_name": "Иван",
+    "middle_name": "Иванович",
+    "birth_date": "1111-11-11",
+    "address": "Ек",
+    "gender": "female",
+    "snils": "",
+    "id_type": "passport",
+    "id_serial": "1234",
+    "id_number": "123456",
+    "id_issued_by": "МВД",
+    "id_issued_date": "1111-11-11",
+    "bank_details": "",
+    "phone": "+79999999999",
+    "email": "123@123",
+    "study_plan": "Экзамен для взрослых",
+    "exam_selection": "12",
+    "exam_date": "1111-11-11",
+    "status": "проверено",
+    "submission_date": "2024-10-24 03:08:09"
+}
